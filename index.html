@@ -563,11 +563,13 @@
 <nav>
   <div class="nav-logo">Ordination <span>Dr. Neumann</span></div>
   <div class="nav-links">
-    <a href="#leistungen">Leistungen</a>
-    <a href="#ueber-uns">Über uns</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#" class="nav-lang" style="color:var(--stone-light);font-size:0.75rem;letter-spacing:0.08em">Magyar</a>
-    <a href="https://neumann-portal-frontend.onrender.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Online Portal</a>
+    <a href="#leistungen" id="nav-leistungen">Leistungen</a>
+    <a href="#ueber-uns" id="nav-ueber">Über uns</a>
+    <a href="#kontakt" id="nav-kontakt">Kontakt</a>
+    <a href="#" class="nav-lang nav-lang-btn" data-lang="hu" onclick="setLang('hu');return false;" style="color:var(--stone-light);font-size:0.75rem;letter-spacing:0.08em">Magyar</a>
+    <a href="#" class="nav-lang-btn" data-lang="de" onclick="setLang('de');return false;" style="color:var(--stone-light);font-size:0.75rem;letter-spacing:0.08em">DE</a>
+    <a href="#" class="nav-lang-btn" data-lang="en" onclick="setLang('en');return false;" style="color:var(--stone-light);font-size:0.75rem;letter-spacing:0.08em">EN</a>
+    <a href="https://neumann-portal-frontend.onrender.com" id="nav-portal" class="nav-cta" target="_blank" rel="noopener noreferrer">Online Portal</a>
   </div>
   <button class="mobile-menu-btn" aria-label="Menü">
     <span></span><span></span><span></span>
@@ -578,32 +580,32 @@
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">
-      <span class="label">Gynäkologie · Wien 18</span>
+      <span class="label" id="hero-eyebrow">Gynäkologie · Wien 18</span>
     </div>
-    <h1 class="display hero-display">
+    <h1 class="display hero-display" id="hero-h1">
       Frauenheilkunde<br>mit <em>Erfahrung</em><br>und Herz.
     </h1>
-    <p class="hero-subtitle">
+    <p class="hero-subtitle" id="hero-sub">
       OA Dr. Michael Neumann und OÄ Dr. Etelka Neumann betreuen Frauen aller Altersgruppen und Nationen in ihrer Ordination in Wien-Währing – seit über 35 Jahren.
     </p>
     <div class="hero-actions">
-      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="https://neumann-portal-frontend.onrender.com" id="hero-cta1" class="btn-primary" target="_blank" rel="noopener noreferrer">
         Termin online anfragen
       </a>
-      <a href="#ueber-uns" class="btn-outline">Über die Ordination</a>
+      <a href="#ueber-uns" id="hero-cta2" class="btn-outline">Über die Ordination</a>
     </div>
     <div class="hero-stats">
       <div>
         <div class="stat-number">8.000+</div>
-        <div class="stat-label">Geburten begleitet</div>
+        <div class="stat-label" id="stat1-label">Geburten begleitet</div>
       </div>
       <div>
         <div class="stat-number">5.000+</div>
-        <div class="stat-label">Operationen</div>
+        <div class="stat-label" id="stat2-label">Operationen</div>
       </div>
       <div>
         <div class="stat-number">35+</div>
-        <div class="stat-label">Jahre Erfahrung</div>
+        <div class="stat-label" id="stat3-label">Jahre Erfahrung</div>
       </div>
     </div>
   </div>
@@ -624,7 +626,7 @@
     </svg>
 
     <div class="hero-times-card">
-      <span class="label">Ordinationszeiten</span>
+      <span class="label" id="times-title">Ordinationszeiten</span>
       <div class="times-row">
         <div class="times-doc">
           <div class="times-doc-name">OA Dr. Michael Neumann</div>
@@ -652,8 +654,8 @@
 <section class="section" id="leistungen">
   <div class="section-inner">
     <div class="section-header">
-      <span class="label">Unser Leistungsspektrum</span>
-      <h2 class="heading">Umfassende Betreuung<br>in jeder Lebensphase.</h2>
+      <span class="label" id="leistungen-eyebrow">Unser Leistungsspektrum</span>
+      <h2 class="heading" id="leistungen-h2">Umfassende Betreuung<br>in jeder Lebensphase.</h2>
     </div>
 
     <div class="leistungen-grid">
@@ -725,8 +727,8 @@
 <section class="ueber-section" id="ueber-uns">
   <div class="section-inner">
     <div class="section-header">
-      <span class="label">Das Team</span>
-      <h2 class="heading">Zwei Ärzte.<br>Eine Leidenschaft.</h2>
+      <span class="label" id="team-eyebrow">Das Team</span>
+      <h2 class="heading" id="team-h2">Zwei Ärzte.<br>Eine Leidenschaft.</h2>
     </div>
 
     <div class="ueber-grid">
@@ -736,15 +738,15 @@
           <div class="arzt-photo-initials">MN</div>
           <div class="arzt-photo-bar"></div>
         </div>
-        <span class="label arzt-role">Frauenarzt</span>
+        <span class="label arzt-role" id="arzt-m-role">Frauenarzt</span>
         <h3 class="arzt-name">OA Dr. Michael Neumann</h3>
-        <p class="arzt-bio">
+        <p class="arzt-bio" id="arzt-m-bio">
           OA Dr. Michael Neumann hat in seiner beruflichen Laufbahn über 8.000 Schwangerschaften und Geburten begleitet und über 5.000 Operationen durchgeführt. Seine Patientinnen schätzen neben seiner beruflichen Kompetenz auch seine freundliche, einfühlsame und humorvolle Art.
           <br><br>
           Von 1980 bis 2014 war er als Gynäkologe am Wiener Wilhelminenspital tätig, seit 1990 als Oberarzt. Er ist Belegarzt im Rudolfinerhaus und Sanatorium Döbling.
         </p>
         <div class="arzt-schwerpunkte">
-          <span class="label">Schwerpunkte</span>
+          <span class="label" id="arzt-m-schwerpunkte">Schwerpunkte</span>
           <div class="schwerpunkt-tags">
             <span class="schwerpunkt-tag">Hormonberatung</span>
             <span class="schwerpunkt-tag">Ultraschalldiagnostik</span>
@@ -761,15 +763,15 @@
           <div class="arzt-photo-initials">EN</div>
           <div class="arzt-photo-bar"></div>
         </div>
-        <span class="label arzt-role">Frauenärztin</span>
+        <span class="label arzt-role" id="arzt-e-role">Frauenärztin</span>
         <h3 class="arzt-name">OÄ Dr. Etelka Neumann</h3>
-        <p class="arzt-bio">
+        <p class="arzt-bio" id="arzt-e-bio" id="arzt-m-bio">
           OÄ Dr. Etelka Neumann weist eine über 30-jährige Erfahrung in der Geburtshilfe und Frauenheilkunde auf. Ihre Patientinnen schätzen ihre professionelle und sanfte Art, ihre hohe Empathie und ihre profunde Erfahrung.
           <br><br>
           Die berufliche Laufbahn begann als diplomierte Krankheitsschwester und Hebamme – über 10 Jahre in der Budapester Semmelweis-Klinik und im Wilhelminenspital Wien. Seit 2008 als Fachärztin tätig, aktuell Belegärztin im Rudolfinerhaus und Sanatorium Döbling. Die Ordination wird auch auf Ungarisch angeboten.
         </p>
         <div class="arzt-schwerpunkte">
-          <span class="label">Schwerpunkte</span>
+          <span class="label" id="arzt-e-schwerpunkte">Schwerpunkte</span>
           <div class="schwerpunkt-tags">
             <span class="schwerpunkt-tag">Hormone</span>
             <span class="schwerpunkt-tag">First Love Beratung</span>
@@ -790,28 +792,28 @@
   <div class="portal-bg"></div>
   <div class="portal-inner">
     <div class="portal-text">
-      <span class="label">Digitale Ordination</span>
-      <h2 class="heading">Termin anfragen,<br>Rezept bestellen –<br>jederzeit online.</h2>
-      <p>Unser Patientenportal ist rund um die Uhr verfügbar. Kein Warten in der Telefonleitung – Anfragen, Termine und Befunde direkt über das Portal.</p>
+      <span class="label" id="portal-eyebrow">Digitale Ordination</span>
+      <h2 class="heading" id="portal-h2">Termin anfragen,<br>Rezept bestellen –<br>jederzeit online.</h2>
+      <p id="portal-sub">Unser Patientenportal ist rund um die Uhr verfügbar. Kein Warten in der Telefonleitung – Anfragen, Termine und Befunde direkt über das Portal.</p>
       <div class="portal-features">
         <div class="portal-feature">
           <div class="portal-feature-dot"></div>
-          <span>Termin online anfragen – in wenigen Minuten</span>
+          <span id="portal-f1">Termin online anfragen – in wenigen Minuten</span>
         </div>
         <div class="portal-feature">
           <div class="portal-feature-dot"></div>
-          <span>Rezeptanfragen bequem von zu Hause</span>
+          <span id="portal-f2">Rezeptanfragen bequem von zu Hause</span>
         </div>
         <div class="portal-feature">
           <div class="portal-feature-dot"></div>
-          <span>Befundabholung – wir benachrichtigen Sie automatisch</span>
+          <span id="portal-f3">Befundabholung – wir benachrichtigen Sie automatisch</span>
         </div>
         <div class="portal-feature">
           <div class="portal-feature-dot"></div>
-          <span>Verfügbar auf Deutsch, Ungarisch und Englisch</span>
+          <span id="portal-f4">Verfügbar auf Deutsch, Ungarisch und Englisch</span>
         </div>
       </div>
-      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="https://neumann-portal-frontend.onrender.com" id="portal-cta" class="btn-primary" target="_blank" rel="noopener noreferrer">
         Portal öffnen →
       </a>
     </div>
@@ -821,12 +823,12 @@
         <div class="portal-dot" style="background:#ff5f57"></div>
         <div class="portal-dot" style="background:#ffbd2e"></div>
         <div class="portal-dot" style="background:#28c840"></div>
-        <span class="portal-widget-title">Patientenportal · Ordination Dr. Neumann</span>
+        <span class="portal-widget-title" id="portal-widget-title">Patientenportal · Ordination Dr. Neumann</span>
       </div>
       <div class="portal-iframe-wrap">
         <div class="portal-iframe-overlay">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#b85c6e" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <p>Sicher, diskret &amp; immer verfügbar</p>
+          <p id="portal-badge">Sicher, diskret &amp; immer verfügbar</p>
           <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;padding:0.7rem 1.4rem">
             Zum Portal
           </a>
@@ -841,19 +843,19 @@
   <div class="kontakt-inner">
     <div class="kontakt-info">
       <div class="section-header" style="margin-bottom:2.5rem">
-        <span class="label">Anfahrt & Kontakt</span>
-        <h2 class="heading">Wir freuen uns<br>auf Ihren Besuch.</h2>
+        <span class="label" id="kontakt-eyebrow">Anfahrt &amp; Kontakt</span>
+        <h2 class="heading" id="kontakt-h2">Wir freuen uns<br>auf Ihren Besuch.</h2>
       </div>
 
       <div class="kontakt-block">
-        <span class="label">Adresse</span>
-        <p>Hofstattgasse 17/3<br>1180 Wien (18. Bezirk)<br><br>
+        <span class="label" id="kontakt-addr-title">Adresse</span>
+        <p id="kontakt-addr-body">Hofstattgasse 17/3<br>1180 Wien (18. Bezirk)<br><br>
         Etwa eine Minute Gehweg vom Aumannplatz.<br>
         Straßenbahnlinien 40 und 41 vom Schottentor.</p>
       </div>
 
       <div class="kontakt-block">
-        <span class="label">Telefon & E-Mail</span>
+        <span class="label" id="kontakt-tel-title">Telefon & E-Mail</span>
         <p>
           <a href="tel:+4314706559">+43 1 470 65 59</a> (während der Ordinationszeiten)<br>
           <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
@@ -861,8 +863,8 @@
       </div>
 
       <div class="kontakt-block">
-        <span class="label">Ordinationszeiten</span>
-        <p>
+        <span class="label" id="kontakt-times-title">Ordinationszeiten</span>
+        <p id="kontakt-times-body">
           <strong>OA Dr. Michael Neumann</strong><br>
           Dienstag & Mittwoch, 14:00–19:00 Uhr<br>
           <br>
@@ -873,7 +875,7 @@
         </p>
       </div>
 
-      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
+      <a id="kontakt-cta" href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
         Online Termin anfragen
       </a>
     </div>
@@ -892,14 +894,14 @@
 <footer>
   <div class="footer-logo">Ordination Dr. Neumann · Gynäkologie Wien 18</div>
   <div class="footer-links">
-    <a href="#" onclick="openModal('impressum'); return false;">Impressum</a>
-    <a href="#" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
-    <a href="https://www.frauenarzt-neumann.at/partner" target="_blank" rel="noopener noreferrer">Partner</a>
+    <a href="#" id="footer-impressum" onclick="openModal('impressum'); return false;">Impressum</a>
+    <a href="#" id="footer-datenschutz" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
+    <a href="https://www.frauenarzt-neumann.at/partner" id="footer-partner" target="_blank" rel="noopener noreferrer">Partner</a>
   </div>
   <div class="footer-lang">
-    <a href="#" class="active">Deutsch</a>
-    <a href="#">Magyar</a>
-    <a href="#">English</a>
+    <a href="#" class="active nav-lang-btn" data-lang="de" onclick="setLang('de');return false;">Deutsch</a>
+    <a href="#" class="nav-lang-btn" data-lang="hu" onclick="setLang('hu');return false;">Magyar</a>
+    <a href="#" class="nav-lang-btn" data-lang="en" onclick="setLang('en');return false;">English</a>
   </div>
 </footer>
 
@@ -914,6 +916,279 @@
     }
   });
 
+  // ── TRANSLATIONS ──
+  const LANG_DATA = {
+    de: {
+      nav: { leistungen: 'Leistungen', ueber: 'Über uns', kontakt: 'Kontakt', portal: 'Online Portal' },
+      hero: {
+        eyebrow: 'Gynäkologie · Wien 18',
+        h1: 'Frauenheilkunde<br>mit <em>Erfahrung</em><br>und Herz.',
+        sub: 'OA Dr. Michael Neumann und OÄ Dr. Etelka Neumann betreuen Frauen aller Altersgruppen und Nationen in ihrer Ordination in Wien-Währing – seit über 35 Jahren.',
+        cta1: 'Termin online anfragen',
+        cta2: 'Über die Ordination',
+        stat1l: 'Geburten begleitet', stat2l: 'Operationen', stat3l: 'Jahre Erfahrung',
+      },
+      times: {
+        title: 'Ordinationszeiten',
+        contact_tel: 'Telefon', contact_mail: 'E-Mail', contact_addr: 'Adresse',
+      },
+      leistungen: {
+        eyebrow: 'Unser Leistungsspektrum',
+        h2: 'Umfassende Betreuung<br>in jeder Lebensphase.',
+        items: [
+          { name: 'Vorsorgeuntersuchung', desc: 'Regelmäßige gynäkologische Untersuchungen und Krebsvorsorge.' },
+          { name: 'Ultraschalldiagnostik', desc: 'Modernste Ultraschalldiagnostik mit Farbdoppler und Gefäßströmungsanalyse.' },
+          { name: 'Schwangerschaft & Geburt', desc: 'Einfühlsame Begleitung durch alle Phasen der Schwangerschaft. Geburten im Rudolfinerhaus und Sanatorium Döbling.' },
+          { name: 'Hormone & Verhütung', desc: 'Individuelle Hormonberatung und umfassende Information zu allen Verhütungsmethoden.' },
+          { name: 'Kinderwunsch', desc: 'Beratung und Begleitung. Kooperation mit spezialisierten Kinderwunschzentren.' },
+          { name: 'Endometriose & Myome', desc: 'Diagnose und Therapie chronischer Unterleibsschmerzen und gutartiger Erkrankungen.' },
+          { name: 'Wechseljahre', desc: 'Ganzheitliche Begleitung und Therapie in den Wechseljahren.' },
+          { name: 'Jugendgynäkologie', desc: 'Einfühlsame First-Love-Beratung und gynäkologische Erstuntersuchungen für junge Patientinnen.' },
+          { name: 'Beckenboden & Inkontinenz', desc: 'Diagnose und Therapie in Kooperation mit spezialisierten UrologInnen.' },
+          { name: 'Onkologie & Nachsorge', desc: 'Gynäkologische Onkologie und engmaschige Nachsorge nach Behandlungen.' },
+          { name: 'Osteoporose', desc: 'Vorsorge, Diagnose und Therapie der Knochendichteabnahme.' },
+          { name: 'Sexualmedizinische Beratung', desc: 'Vertrauliche Beratung zu sexueller Gesundheit in einem sicheren Rahmen.' },
+        ]
+      },
+      team: {
+        eyebrow: 'Das Team',
+        h2: 'Zwei Ärzte.<br>Eine Leidenschaft.',
+        m_role: 'Frauenarzt', m_schwerpunkte: 'Schwerpunkte',
+        m_bio: 'OA Dr. Michael Neumann hat in seiner beruflichen Laufbahn über 8.000 Schwangerschaften und Geburten begleitet und über 5.000 Operationen durchgeführt. Seine Patientinnen schätzen neben seiner beruflichen Kompetenz auch seine freundliche, einfühlsame und humorvolle Art.<br><br>Von 1980 bis 2014 war er als Gynäkologe am Wiener Wilhelminenspital tätig, seit 1990 als Oberarzt. Er ist Belegarzt im Rudolfinerhaus und Sanatorium Döbling.',
+        e_role: 'Frauenärztin',
+        e_bio: 'OÄ Dr. Etelka Neumann weist eine über 30-jährige Erfahrung in der Geburtshilfe und Frauenheilkunde auf. Ihre Patientinnen schätzen ihre professionelle und sanfte Art, ihre hohe Empathie und ihre profunde Erfahrung.<br><br>Die berufliche Laufbahn begann als diplomierte Krankheitsschwester und Hebamme – über 10 Jahre in der Budapester Semmelweis-Klinik und im Wilhelminenspital Wien. Seit 2008 als Fachärztin tätig, aktuell Belegärztin im Rudolfinerhaus und Sanatorium Döbling. Die Ordination wird auch auf Ungarisch angeboten.',
+      },
+      portal: {
+        eyebrow: 'Digitale Ordination',
+        h2: 'Termin anfragen,<br>Rezept bestellen –<br>jederzeit online.',
+        sub: 'Unser Patientenportal ist rund um die Uhr verfügbar. Kein Warten in der Telefonleitung – Anfragen, Termine und Befunde direkt über das Portal.',
+        f1: 'Termin online anfragen – in wenigen Minuten',
+        f2: 'Rezeptanfragen bequem von zu Hause',
+        f3: 'Befundabholung – wir benachrichtigen Sie automatisch',
+        f4: 'Verfügbar auf Deutsch, Ungarisch und Englisch',
+        cta: 'Portal öffnen →',
+        badge: 'Sicher, diskret & immer verfügbar',
+        widget_title: 'Patientenportal · Ordination Dr. Neumann',
+      },
+      kontakt: {
+        eyebrow: 'Anfahrt & Kontakt',
+        h2: 'Wir freuen uns<br>auf Ihren Besuch.',
+        addr_title: 'Adresse', addr_body: 'Hofstattgasse 17/3<br>1180 Wien (18. Bezirk)<br><br>Etwa eine Minute Gehweg vom Aumannplatz.<br>Straßenbahnlinien 40 und 41 vom Schottentor.',
+        tel_title: 'Telefon & E-Mail',
+        times_title: 'Ordinationszeiten',
+        times_body: '<strong>OA Dr. Michael Neumann</strong><br>Dienstag & Mittwoch, 14:00–19:00 Uhr<br><br><strong>OÄ Dr. Etelka Neumann</strong><br>Montag & Donnerstag, 11:00–18:00 Uhr<br><br>Termine nach Vereinbarung auch außerhalb dieser Zeiten möglich.',
+        cta: 'Online Termin anfragen',
+      },
+      footer: { impressum: 'Impressum', datenschutz: 'Datenschutz', partner: 'Partner' },
+      modal_impressum: 'Impressum',
+      modal_datenschutz: 'Datenschutzerklärung',
+    },
+    hu: {
+      nav: { leistungen: 'Szolgáltatások', ueber: 'Rólunk', kontakt: 'Kapcsolat', portal: 'Online Portál' },
+      hero: {
+        eyebrow: 'Nőgyógyászat · Bécs 18.',
+        h1: 'Nőgyógyászat<br><em>tapasztalattal</em><br>és szívvel.',
+        sub: 'OA Dr. Michael Neumann és OÄ Dr. Etelka Neumann minden korú és nemzetiségű nőbeteget ellátnak bécsi rendelőjükben – több mint 35 éve.',
+        cta1: 'Időpontot kérek online', cta2: 'A rendelőről',
+        stat1l: 'szülés kísérve', stat2l: 'műtét elvégezve', stat3l: 'év tapasztalat',
+      },
+      times: { title: 'Rendelési idők' },
+      leistungen: {
+        eyebrow: 'Szolgáltatásaink',
+        h2: 'Átfogó ellátás<br>az élet minden szakaszában.',
+        items: [
+          { name: 'Megelőző vizsgálat', desc: 'Rendszeres nőgyógyászati vizsgálatok és rákszűrés.' },
+          { name: 'Ultrahang-diagnosztika', desc: 'Korszerű ultrahang-diagnosztika színes Doppler és érátáramlás-elemzéssel.' },
+          { name: 'Terhesség & szülés', desc: 'Érzékeny kíséret a terhesség minden szakaszán. Szülések a Rudolfinerhaus-ban és a Sanatorium Döblingben.' },
+          { name: 'Hormonok & fogamzásgátlás', desc: 'Egyéni hormontanácsadás és átfogó tájékoztatás minden fogamzásgátlási módszerről.' },
+          { name: 'Gyermekvállalási tanácsadás', desc: 'Tanácsadás és kíséret. Együttműködés speciális meddőségi központokkal.' },
+          { name: 'Endometriózis & miómák', desc: 'Krónikus alhasi fájdalmak és jóindulatú betegségek diagnózisa és kezelése.' },
+          { name: 'Klimax', desc: 'Holisztikus kíséret és terápia a menopauza idején.' },
+          { name: 'Fiatal nőgyógyászat', desc: 'Érzékeny first-love tanácsadás és első nőgyógyászati vizsgálatok fiatal pácienseknek.' },
+          { name: 'Medencefenék & inkontinencia', desc: 'Diagnózis és terápia speciális urológusokkal együttműködve.' },
+          { name: 'Onkológia & utókezelés', desc: 'Nőgyógyászati onkológia és szoros utókövetés kezelés után.' },
+          { name: 'Csontritkulás', desc: 'Megelőzés, diagnózis és a csontsűrűség csökkenésének kezelése.' },
+          { name: 'Szexuálmedicinai tanácsadás', desc: 'Bizalmas tanácsadás a szexuális egészségről biztonságos környezetben.' },
+        ]
+      },
+      team: {
+        eyebrow: 'A csapat',
+        h2: 'Két orvos.<br>Egy szenvedély.',
+        m_role: 'Nőgyógyász', m_schwerpunkte: 'Szakterületek',
+        m_bio: 'OA Dr. Michael Neumann szakmai pályafutása során több mint 8 000 terhességet és szülést kísért végig, és több mint 5 000 műtétet végzett. Páciensek szakmai kompetenciája mellett barátságos, empatikus és humoros stílusát is értékelik.<br><br>1980-tól 2014-ig a bécsi Wilhelminenspital nőgyógyásza volt, 1990-től főorvosi beosztásban. Belegorvos a Rudolfinerhaus-ban és a Sanatorium Döblingben.',
+        e_role: 'Nőgyógyász',
+        e_bio: 'OÄ Dr. Etelka Neumann több mint 30 éves tapasztalattal rendelkezik a szülészetben és nőgyógyászatban. Páciensek professzionális és gyengéd stílusát, magas empátiáját és mély tapasztalatát értékelik.<br><br>Pályafutását diplomás ápolóként és bábáként kezdte – több mint 10 évig dolgozott a budapesti Semmelweis Klinikán és a bécsi Wilhelminenspitalban. 2008 óta szakorvos, jelenleg a Rudolfinerhaus és a Sanatorium Döbling belegárztnője. A rendelő magyar nyelven is elérhető.',
+      },
+      portal: {
+        eyebrow: 'Digitális rendelő',
+        h2: 'Időpontot kérni,<br>receptet rendelni –<br>bármikor online.',
+        sub: 'Betegportálunk a nap 24 órájában elérhető. Nincs több várakozás a telefonon – kérések, időpontok és leletek közvetlenül a portálon keresztül.',
+        f1: 'Online időpontfoglalás – percek alatt',
+        f2: 'Receptkérés otthonról kényelmesen',
+        f3: 'Leletátvétel – automatikusan értesítjük',
+        f4: 'Elérhető németül, magyarul és angolul',
+        cta: 'Portál megnyitása →',
+        badge: 'Biztonságos, diszkrét & mindig elérhető',
+        widget_title: 'Betegportál · Dr. Neumann Rendelő',
+      },
+      kontakt: {
+        eyebrow: 'Megközelíthetőség & kapcsolat',
+        h2: 'Örömmel várjuk<br>látogatását.',
+        addr_title: 'Cím', addr_body: 'Hofstattgasse 17/3<br>1180 Bécs (18. kerület)<br><br>Az Aumannplatztól kb. egy perc gyaloglás.<br>40-es és 41-es villamosok a Schottentor-tól.',
+        tel_title: 'Telefon & E-mail',
+        times_title: 'Rendelési idők',
+        times_body: '<strong>OA Dr. Michael Neumann</strong><br>Kedd & Szerda, 14:00–19:00<br><br><strong>OÄ Dr. Etelka Neumann</strong><br>Hétfő & Csütörtök, 11:00–18:00<br><br>Megbeszélés alapján az időpontokon kívül is lehetséges.',
+        cta: 'Online időpontfoglalás',
+      },
+      footer: { impressum: 'Impresszum', datenschutz: 'Adatvédelem', partner: 'Partnerek' },
+      modal_impressum: 'Impresszum',
+      modal_datenschutz: 'Adatvédelmi nyilatkozat',
+    },
+    en: {
+      nav: { leistungen: 'Services', ueber: 'About us', kontakt: 'Contact', portal: 'Online Portal' },
+      hero: {
+        eyebrow: 'Gynaecology · Vienna 18th',
+        h1: "Women's health<br>with <em>experience</em><br>and heart.",
+        sub: 'OA Dr. Michael Neumann and OÄ Dr. Etelka Neumann care for women of all ages and nationalities at their practice in Vienna-Währing – for over 35 years.',
+        cta1: 'Book appointment online', cta2: 'About the practice',
+        stat1l: 'births accompanied', stat2l: 'operations', stat3l: 'years of experience',
+      },
+      times: { title: 'Opening hours' },
+      leistungen: {
+        eyebrow: 'Our services',
+        h2: 'Comprehensive care<br>at every stage of life.',
+        items: [
+          { name: 'Preventive check-up', desc: 'Regular gynaecological examinations and cancer screening.' },
+          { name: 'Ultrasound diagnostics', desc: 'State-of-the-art ultrasound with colour Doppler and vascular flow analysis.' },
+          { name: 'Pregnancy & birth', desc: 'Caring accompaniment through all phases of pregnancy. Births at Rudolfinerhaus and Sanatorium Döbling.' },
+          { name: 'Hormones & contraception', desc: 'Individual hormone counselling and comprehensive information on all contraceptive methods.' },
+          { name: 'Family planning', desc: 'Counselling and support. Cooperation with specialist fertility centres.' },
+          { name: 'Endometriosis & fibroids', desc: 'Diagnosis and treatment of chronic pelvic pain and benign conditions.' },
+          { name: 'Menopause', desc: 'Holistic accompaniment and therapy during the menopause.' },
+          { name: 'Adolescent gynaecology', desc: 'Sensitive first-love counselling and first gynaecological examinations for young patients.' },
+          { name: 'Pelvic floor & incontinence', desc: 'Diagnosis and therapy in cooperation with specialist urologists.' },
+          { name: 'Oncology & aftercare', desc: 'Gynaecological oncology and close follow-up after treatment.' },
+          { name: 'Osteoporosis', desc: 'Prevention, diagnosis and treatment of bone density loss.' },
+          { name: 'Sexual health counselling', desc: 'Confidential counselling on sexual health in a safe environment.' },
+        ]
+      },
+      team: {
+        eyebrow: 'The team',
+        h2: 'Two doctors.<br>One passion.',
+        m_role: 'Gynaecologist', m_schwerpunkte: 'Specialisations',
+        m_bio: 'OA Dr. Michael Neumann has accompanied over 8,000 pregnancies and births and performed over 5,000 operations throughout his career. His patients value not only his professional competence but also his friendly, empathetic and humorous manner.<br><br>From 1980 to 2014 he worked as a gynaecologist at the Wilhelminenspital in Vienna, from 1990 as senior physician. He is a consultant at Rudolfinerhaus and Sanatorium Döbling.',
+        e_role: 'Gynaecologist',
+        e_bio: "OÄ Dr. Etelka Neumann has over 30 years of experience in obstetrics and gynaecology. Her patients value her professional and gentle manner, her high empathy and her profound experience.<br><br>She began her career as a qualified nurse and midwife – working for over 10 years at the Semmelweis Clinic in Budapest and the Wilhelminenspital in Vienna. She has been a specialist since 2008 and is currently a consultant at Rudolfinerhaus and Sanatorium Döbling. The practice is also available in Hungarian.",
+      },
+      portal: {
+        eyebrow: 'Digital practice',
+        h2: 'Request appointments,<br>order prescriptions –<br>anytime online.',
+        sub: 'Our patient portal is available 24/7. No waiting on the phone – requests, appointments and results directly through the portal.',
+        f1: 'Book an appointment online – in minutes',
+        f2: 'Prescription requests from the comfort of home',
+        f3: 'Result collection – we notify you automatically',
+        f4: 'Available in German, Hungarian and English',
+        cta: 'Open portal →',
+        badge: "Secure, discreet & always available",
+        widget_title: 'Patient portal · Ordination Dr. Neumann',
+      },
+      kontakt: {
+        eyebrow: 'Directions & contact',
+        h2: 'We look forward<br>to your visit.',
+        addr_title: 'Address', addr_body: "Hofstattgasse 17/3<br>1180 Vienna (18th district)<br><br>About one minute's walk from Aumannplatz.<br>Tram lines 40 and 41 from Schottentor.",
+        tel_title: 'Phone & Email',
+        times_title: 'Opening hours',
+        times_body: "<strong>OA Dr. Michael Neumann</strong><br>Tuesday & Wednesday, 2:00 pm–7:00 pm<br><br><strong>OÄ Dr. Etelka Neumann</strong><br>Monday & Thursday, 11:00 am–6:00 pm<br><br>Appointments by arrangement also possible outside these hours.",
+        cta: 'Book appointment online',
+      },
+      footer: { impressum: 'Legal notice', datenschutz: 'Privacy policy', partner: 'Partners' },
+      modal_impressum: 'Legal Notice',
+      modal_datenschutz: 'Privacy Policy',
+    }
+  };
+
+  let currentLang = 'de';
+
+  function setLang(lang) {
+    currentLang = lang;
+    const t = LANG_DATA[lang];
+
+    // Update html lang attribute
+    document.documentElement.lang = lang;
+
+    // Nav
+    document.getElementById('nav-leistungen').textContent = t.nav.leistungen;
+    document.getElementById('nav-ueber').textContent = t.nav.ueber;
+    document.getElementById('nav-kontakt').textContent = t.nav.kontakt;
+    document.getElementById('nav-portal').textContent = t.nav.portal;
+
+    // Hero
+    document.getElementById('hero-eyebrow').textContent = t.hero.eyebrow;
+    document.getElementById('hero-h1').innerHTML = t.hero.h1;
+    document.getElementById('hero-sub').textContent = t.hero.sub;
+    document.getElementById('hero-cta1').textContent = t.hero.cta1;
+    document.getElementById('hero-cta2').textContent = t.hero.cta2;
+    document.getElementById('stat1-label').textContent = t.hero.stat1l;
+    document.getElementById('stat2-label').textContent = t.hero.stat2l;
+    document.getElementById('stat3-label').textContent = t.hero.stat3l;
+
+    // Times
+    document.getElementById('times-title').textContent = t.times.title;
+
+    // Leistungen
+    document.getElementById('leistungen-eyebrow').textContent = t.leistungen.eyebrow;
+    document.getElementById('leistungen-h2').innerHTML = t.leistungen.h2;
+    const leistItems = document.querySelectorAll('.leistung-item');
+    t.leistungen.items.forEach((item, i) => {
+      if (leistItems[i]) {
+        leistItems[i].querySelector('.leistung-name').textContent = item.name;
+        leistItems[i].querySelector('.leistung-desc').textContent = item.desc;
+      }
+    });
+
+    // Team
+    document.getElementById('team-eyebrow').textContent = t.team.eyebrow;
+    document.getElementById('team-h2').innerHTML = t.team.h2;
+    document.getElementById('arzt-m-role').textContent = t.team.m_role;
+    document.getElementById('arzt-m-bio').innerHTML = t.team.m_bio;
+    document.getElementById('arzt-m-schwerpunkte').textContent = t.team.m_schwerpunkte;
+    document.getElementById('arzt-e-role').textContent = t.team.e_role;
+    document.getElementById('arzt-e-bio').innerHTML = t.team.e_bio;
+    document.getElementById('arzt-e-schwerpunkte').textContent = t.team.m_schwerpunkte;
+
+    // Portal
+    document.getElementById('portal-eyebrow').textContent = t.portal.eyebrow;
+    document.getElementById('portal-h2').innerHTML = t.portal.h2;
+    document.getElementById('portal-sub').textContent = t.portal.sub;
+    document.getElementById('portal-f1').textContent = t.portal.f1;
+    document.getElementById('portal-f2').textContent = t.portal.f2;
+    document.getElementById('portal-f3').textContent = t.portal.f3;
+    document.getElementById('portal-f4').textContent = t.portal.f4;
+    document.getElementById('portal-cta').textContent = t.portal.cta;
+    document.getElementById('portal-badge').textContent = t.portal.badge;
+    document.getElementById('portal-widget-title').textContent = t.portal.widget_title;
+
+    // Kontakt
+    document.getElementById('kontakt-eyebrow').textContent = t.kontakt.eyebrow;
+    document.getElementById('kontakt-h2').innerHTML = t.kontakt.h2;
+    document.getElementById('kontakt-addr-title').textContent = t.kontakt.addr_title;
+    document.getElementById('kontakt-addr-body').innerHTML = t.kontakt.addr_body;
+    document.getElementById('kontakt-tel-title').textContent = t.kontakt.tel_title;
+    document.getElementById('kontakt-times-title').textContent = t.kontakt.times_title;
+    document.getElementById('kontakt-times-body').innerHTML = t.kontakt.times_body;
+    document.getElementById('kontakt-cta').textContent = t.kontakt.cta;
+
+    // Footer
+    document.getElementById('footer-impressum').textContent = t.footer.impressum;
+    document.getElementById('footer-datenschutz').textContent = t.footer.datenschutz;
+    document.getElementById('footer-partner').textContent = t.footer.partner;
+
+    // Lang switcher highlight
+    document.querySelectorAll('.footer-lang a, .nav-lang-btn').forEach(a => {
+      a.classList.toggle('active', a.dataset.lang === lang);
+    });
+  }
+
   // Modal functions
   function openModal(which) {
     document.getElementById('modal-' + which).classList.add('open');
@@ -924,6 +1199,9 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Init language
+  setLang('de');
 
   // Subtle scroll animation
   const observer = new IntersectionObserver((entries) => {
@@ -952,8 +1230,8 @@
     </div>
     <div class="modal-body">
       <h3>Angaben gemäß § 5 ECG</h3>
-      <p>
-        <strong>OA Dr. Michael Neumann</strong><br>
+      <p id="kontakt-times-body">
+          <strong>OA Dr. Michael Neumann</strong><br>
         Facharzt für Gynäkologie und Geburtshilfe<br>
         Hofstattgasse 17/3<br>
         1180 Wien, Österreich
