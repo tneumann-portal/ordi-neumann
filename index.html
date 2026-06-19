@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OA Dr. Michael Neumann & OÄ Dr. Etelka Neumann – Gynäkologie und Geburtshilfe in 1180 Wien. Über 35 Jahre Erfahrung. Jetzt online Termin anfragen.">
+<title>Ordination Dr. Neumann – Gynäkologie Wien 18</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ── TOKENS ── */
+  :root {
+    --rose:       #b85c6e;
+    --rose-deep:  #8a3f51;
+    --rose-light: #f7eef0;
+    --rose-mist:  #fdf5f6;
+    --stone:      #2a2320;
+    --stone-mid:  #5a4e4a;
+    --stone-light:#9a8e8a;
+    --cream:      #faf7f4;
+    --white:      #ffffff;
+    --border:     #e8ddd8;
+    --gold:       #c9a96e;
+  }
+
+  /* ── RESET ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: var(--stone);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── TYPE SCALE ── */
+  .display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .subheading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+  .label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--rose);
+  }
+  .body-text { font-size: 0.95rem; color: var(--stone-mid); line-height: 1.8; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw;
+    height: 64px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--stone);
+  }
+  .nav-logo span { color: var(--rose); }
+  .nav-links { display: flex; align-items: center; gap: 2rem; }
+  .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--stone-mid);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--rose); }
+  .nav-cta {
+    background: var(--rose);
+    color: var(--white) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--rose-deep) !important; color: var(--white) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 8vw 5vw 8vw 8vw;
+    background: var(--cream);
+    position: relative;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; right: -1px; top: 10%; bottom: 10%;
+    width: 1px; background: var(--border);
+  }
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--rose);
+  }
+  .hero-display { margin-bottom: 2rem; }
+  .hero-display em {
+    font-style: italic;
+    color: var(--rose);
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    color: var(--stone-mid);
+    line-height: 1.8;
+    max-width: 38ch;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--rose);
+    color: var(--white);
+    padding: 0.85rem 1.8rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none; cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--rose-deep); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: transparent;
+    color: var(--stone);
+    padding: 0.85rem 1.8rem;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+    text-decoration: none;
+  }
+  .btn-outline:hover { border-color: var(--rose); color: var(--rose); }
+  .hero-stats {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex; gap: 2.5rem;
+  }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--stone);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.72rem; color: var(--stone-light); letter-spacing: 0.04em; margin-top: 0.25rem; }
+
+  .hero-right {
+    position: relative;
+    background: var(--rose-mist);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 4rem;
+    overflow: hidden;
+  }
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 20%, rgba(184,92,110,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(184,92,110,0.06) 0%, transparent 40%);
+  }
+
+  /* Decorative botanical SVG */
+  .hero-botanical {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 0.08;
+  }
+
+  .hero-times-card {
+    position: relative; z-index: 1;
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 40px rgba(42,35,32,0.06);
+  }
+  .times-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .times-doc { }
+  .times-doc-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--stone);
+    margin-bottom: 0.4rem;
+  }
+  .times-doc-day { font-size: 0.85rem; font-weight: 500; color: var(--stone-mid); }
+  .times-doc-hours { font-size: 0.78rem; color: var(--stone-light); margin-top: 0.15rem; }
+  .times-doc-ins {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    color: var(--rose);
+    border: 1px solid var(--rose-light);
+    border-radius: 2px;
+    padding: 0.15rem 0.5rem;
+    background: var(--rose-mist);
+  }
+  .times-contact {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--stone-mid);
+    display: flex; flex-direction: column; gap: 0.3rem;
+  }
+  .times-contact a { color: var(--rose); }
+
+  /* ── LEISTUNGEN ── */
+  .section {
+    padding: 7rem 8vw;
+  }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-header { margin-bottom: 4rem; }
+  .section-header .label { margin-bottom: 0.75rem; display: block; }
+
+  .leistungen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .leistung-item {
+    background: var(--white);
+    padding: 2rem 1.8rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+    transition: background 0.2s;
+  }
+  .leistung-item:hover { background: var(--rose-mist); }
+  .leistung-icon {
+    width: 32px; height: 32px;
+    color: var(--rose);
+    margin-bottom: 0.25rem;
+  }
+  .leistung-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--stone);
+  }
+  .leistung-desc { font-size: 0.82rem; color: var(--stone-light); line-height: 1.6; }
+
+  /* ── ÜBER UNS ── */
+  .ueber-section {
+    padding: 7rem 8vw;
+    background: var(--cream);
+  }
+  .ueber-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+  }
+  .arzt-card { }
+  .arzt-photo-wrap {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: var(--rose-mist);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .arzt-photo-initials {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--rose);
+    opacity: 0.4;
+  }
+  .arzt-photo-bar {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--rose);
+  }
+  .arzt-role { margin-bottom: 0.5rem; }
+  .arzt-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .arzt-bio { font-size: 0.9rem; color: var(--stone-mid); line-height: 1.9; margin-bottom: 1.5rem; }
+  .arzt-schwerpunkte { }
+  .arzt-schwerpunkte .label { margin-bottom: 0.6rem; display: block; }
+  .schwerpunkt-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .schwerpunkt-tag {
+    font-size: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 0.25rem 0.6rem;
+    color: var(--stone-mid);
+    background: var(--white);
+  }
+
+  /* ── PORTAL CTA ── */
+  .portal-section {
+    padding: 7rem 8vw;
+    background: var(--stone);
+    position: relative;
+    overflow: hidden;
+  }
+  .portal-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 10% 50%, rgba(184,92,110,0.15) 0%, transparent 50%),
+      radial-gradient(circle at 90% 50%, rgba(184,92,110,0.08) 0%, transparent 40%);
+  }
+  .portal-inner {
+    max-width: 1200px; margin: 0 auto;
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+  }
+  .portal-text .label { color: var(--gold); margin-bottom: 1rem; display: block; }
+  .portal-text .heading { color: var(--white); margin-bottom: 1.5rem; }
+  .portal-text p { color: rgba(255,255,255,0.65); line-height: 1.8; font-size: 0.95rem; margin-bottom: 2rem; }
+  .portal-features { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+  .portal-feature {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    font-size: 0.88rem; color: rgba(255,255,255,0.75);
+  }
+  .portal-feature-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--rose); flex-shrink: 0; margin-top: 0.55rem;
+  }
+  .portal-widget {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .portal-widget-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .portal-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .portal-widget-title { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+  .portal-iframe-wrap {
+    height: 380px;
+    position: relative;
+    background: var(--rose-mist);
+  }
+  .portal-iframe-wrap iframe {
+    width: 100%; height: 100%; border: none;
+    transform: scale(0.85); transform-origin: top left;
+    width: 117.6%; height: 117.6%;
+  }
+  .portal-iframe-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(250,247,244,0.85);
+    backdrop-filter: blur(4px);
+    flex-direction: column; gap: 1rem;
+  }
+  .portal-iframe-overlay p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--stone) !important;
+    margin: 0 !important;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  /* ── KONTAKT ── */
+  .kontakt-section {
+    padding: 7rem 8vw;
+    background: var(--white);
+  }
+  .kontakt-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+  }
+  .kontakt-info { }
+  .kontakt-block { margin-bottom: 2.5rem; }
+  .kontakt-block .label { display: block; margin-bottom: 0.75rem; }
+  .kontakt-block p { font-size: 0.92rem; color: var(--stone-mid); line-height: 1.9; }
+  .kontakt-block a { color: var(--rose); }
+  .kontakt-map {
+    background: var(--rose-mist);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 360px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 1rem;
+  }
+  .kontakt-map-placeholder {
+    text-align: center;
+    padding: 2rem;
+  }
+  .kontakt-map-placeholder .heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .kontakt-map-placeholder p { font-size: 0.85rem; color: var(--stone-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 3rem 8vw;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem; color: var(--stone-mid);
+  }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.78rem; color: var(--stone-light); letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--rose); }
+  .footer-lang { display: flex; gap: 1rem; }
+  .footer-lang a {
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--stone-light); transition: color 0.2s;
+  }
+  .footer-lang a:hover, .footer-lang a.active { color: var(--rose); }
+
+  /* ── MOBILE ── */
+  .mobile-menu-btn {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    flex-direction: column; gap: 4px; padding: 4px;
+  }
+  .mobile-menu-btn span { display: block; width: 22px; height: 1.5px; background: var(--stone); }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 4rem 6vw 3rem; }
+    .hero-left::after { display: none; }
+    .hero-right { padding: 3rem 6vw; min-height: 360px; }
+    .ueber-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .portal-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .kontakt-inner { grid-template-columns: 1fr; }
+    .kontakt-map { min-height: 240px; }
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .times-row { grid-template-columns: 1fr; gap: 1rem; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Ordination <span>Dr. Neumann</span></div>
+  <div class="nav-links">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#" class="nav-lang" style="color:var(--stone-light);font-size:0.75rem;letter-spacing:0.08em">Magyar</a>
+    <a href="https://neumann-portal-frontend.onrender.com" class="nav-cta" target="_blank">Online Portal</a>
+  </div>
+  <button class="mobile-menu-btn" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="label">Gynäkologie · Wien 18</span>
+    </div>
+    <h1 class="display hero-display">
+      Frauenheilkunde<br>mit <em>Erfahrung</em><br>und Herz.
+    </h1>
+    <p class="hero-subtitle">
+      OA Dr. Michael Neumann und OÄ Dr. Etelka Neumann betreuen Frauen aller Altersgruppen und Nationen in ihrer Ordination in Wien-Währing – seit über 35 Jahren.
+    </p>
+    <div class="hero-actions">
+      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank">
+        Termin online anfragen
+      </a>
+      <a href="#ueber-uns" class="btn-outline">Über die Ordination</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number">8.000+</div>
+        <div class="stat-label">Geburten begleitet</div>
+      </div>
+      <div>
+        <div class="stat-number">5.000+</div>
+        <div class="stat-label">Operationen</div>
+      </div>
+      <div>
+        <div class="stat-number">35+</div>
+        <div class="stat-label">Jahre Erfahrung</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+
+    <!-- Botanical decoration -->
+    <svg class="hero-botanical" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="200" cy="250" rx="80" ry="140" stroke="#b85c6e" stroke-width="1" fill="none"/>
+      <ellipse cx="200" cy="250" rx="50" ry="100" stroke="#b85c6e" stroke-width="0.8" fill="none" transform="rotate(30 200 250)"/>
+      <ellipse cx="200" cy="250" rx="50" ry="100" stroke="#b85c6e" stroke-width="0.8" fill="none" transform="rotate(-30 200 250)"/>
+      <ellipse cx="200" cy="250" rx="50" ry="100" stroke="#b85c6e" stroke-width="0.8" fill="none" transform="rotate(60 200 250)"/>
+      <ellipse cx="200" cy="250" rx="50" ry="100" stroke="#b85c6e" stroke-width="0.8" fill="none" transform="rotate(-60 200 250)"/>
+      <circle cx="200" cy="250" r="8" stroke="#b85c6e" stroke-width="1" fill="none"/>
+      <line x1="200" y1="110" x2="200" y2="390" stroke="#b85c6e" stroke-width="0.5"/>
+      <line x1="60" y1="250" x2="340" y2="250" stroke="#b85c6e" stroke-width="0.5"/>
+    </svg>
+
+    <div class="hero-times-card">
+      <span class="label">Ordinationszeiten</span>
+      <div class="times-row">
+        <div class="times-doc">
+          <div class="times-doc-name">OA Dr. Michael Neumann</div>
+          <div class="times-doc-day">Dienstag & Mittwoch</div>
+          <div class="times-doc-hours">14:00 – 19:00 Uhr</div>
+          <span class="times-doc-ins">BVAEB · KFA · Privat</span>
+        </div>
+        <div class="times-doc">
+          <div class="times-doc-name">OÄ Dr. Etelka Neumann</div>
+          <div class="times-doc-day">Montag & Donnerstag</div>
+          <div class="times-doc-hours">11:00 – 18:00 Uhr</div>
+          <span class="times-doc-ins">KFA · Privat · Magyar</span>
+        </div>
+      </div>
+      <div class="times-contact">
+        <span>📞 <a href="tel:+4314706559">+43 1 470 65 59</a></span>
+        <span>✉ <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a></span>
+        <span>📍 Hofstattgasse 17/3, 1180 Wien</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="section" id="leistungen">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="label">Unser Leistungsspektrum</span>
+      <h2 class="heading">Umfassende Betreuung<br>in jeder Lebensphase.</h2>
+    </div>
+
+    <div class="leistungen-grid">
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        <div class="leistung-name">Vorsorgeuntersuchung</div>
+        <div class="leistung-desc">Regelmäßige gynäkologische Untersuchungen und Krebsvorsorge.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        <div class="leistung-name">Ultraschalldiagnostik</div>
+        <div class="leistung-desc">Modernste Ultraschalldiagnostik mit Farbdoppler und Gefäßströmungsanalyse.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <div class="leistung-name">Schwangerschaft & Geburt</div>
+        <div class="leistung-desc">Einfühlsame Begleitung durch alle Phasen der Schwangerschaft. Geburten im Rudolfinerhaus und Sanatorium Döbling.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg>
+        <div class="leistung-name">Hormone & Verhütung</div>
+        <div class="leistung-desc">Individuelle Hormonberatung und umfassende Information zu allen Verhütungsmethoden.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <div class="leistung-name">Kinderwunsch</div>
+        <div class="leistung-desc">Beratung und Begleitung. Kooperation mit spezialisierten Kinderwunschzentren.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <div class="leistung-name">Endometriose & Myome</div>
+        <div class="leistung-desc">Diagnose und Therapie chronischer Unterleibsschmerzen und gutartiger Erkrankungen.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="leistung-name">Wechseljahre</div>
+        <div class="leistung-desc">Ganzheitliche Begleitung und Therapie in den Wechseljahren.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <div class="leistung-name">Jugendgynäkologie</div>
+        <div class="leistung-desc">Einfühlsame First-Love-Beratung und gynäkologische Erstuntersuchungen für junge Patientinnen.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="leistung-name">Beckenboden & Inkontinenz</div>
+        <div class="leistung-desc">Diagnose und Therapie in Kooperation mit spezialisierten UrologInnen.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="leistung-name">Onkologie & Nachsorge</div>
+        <div class="leistung-desc">Gynäkologische Onkologie und engmaschige Nachsorge nach Behandlungen.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <div class="leistung-name">Osteoporose</div>
+        <div class="leistung-desc">Vorsorge, Diagnose und Therapie der Knochendichteabnahme.</div>
+      </div>
+      <div class="leistung-item">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        <div class="leistung-name">Sexualmedizinische Beratung</div>
+        <div class="leistung-desc">Vertrauliche Beratung zu sexueller Gesundheit in einem sicheren Rahmen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section class="ueber-section" id="ueber-uns">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="label">Das Team</span>
+      <h2 class="heading">Zwei Ärzte.<br>Eine Leidenschaft.</h2>
+    </div>
+
+    <div class="ueber-grid">
+      <!-- Michael -->
+      <div class="arzt-card">
+        <div class="arzt-photo-wrap">
+          <div class="arzt-photo-initials">MN</div>
+          <div class="arzt-photo-bar"></div>
+        </div>
+        <span class="label arzt-role">Frauenarzt</span>
+        <h3 class="arzt-name">OA Dr. Michael Neumann</h3>
+        <p class="arzt-bio">
+          OA Dr. Michael Neumann hat in seiner beruflichen Laufbahn über 8.000 Schwangerschaften und Geburten begleitet und über 5.000 Operationen durchgeführt. Seine Patientinnen schätzen neben seiner beruflichen Kompetenz auch seine freundliche, einfühlsame und humorvolle Art.
+          <br><br>
+          Von 1980 bis 2014 war er als Gynäkologe am Wiener Wilhelminenspital tätig, seit 1990 als Oberarzt. Er ist Belegarzt im Rudolfinerhaus und Sanatorium Döbling.
+        </p>
+        <div class="arzt-schwerpunkte">
+          <span class="label">Schwerpunkte</span>
+          <div class="schwerpunkt-tags">
+            <span class="schwerpunkt-tag">Hormonberatung</span>
+            <span class="schwerpunkt-tag">Ultraschalldiagnostik</span>
+            <span class="schwerpunkt-tag">Schwangerschaft</span>
+            <span class="schwerpunkt-tag">Kinderwunsch</span>
+            <span class="schwerpunkt-tag">BVAEB · KFA · Privat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etelka -->
+      <div class="arzt-card">
+        <div class="arzt-photo-wrap">
+          <div class="arzt-photo-initials">EN</div>
+          <div class="arzt-photo-bar"></div>
+        </div>
+        <span class="label arzt-role">Frauenärztin</span>
+        <h3 class="arzt-name">OÄ Dr. Etelka Neumann</h3>
+        <p class="arzt-bio">
+          OÄ Dr. Etelka Neumann weist eine über 30-jährige Erfahrung in der Geburtshilfe und Frauenheilkunde auf. Ihre Patientinnen schätzen ihre professionelle und sanfte Art, ihre hohe Empathie und ihre profunde Erfahrung.
+          <br><br>
+          Die berufliche Laufbahn begann als diplomierte Krankheitsschwester und Hebamme – über 10 Jahre in der Budapester Semmelweis-Klinik und im Wilhelminenspital Wien. Seit 2008 als Fachärztin tätig, aktuell Belegärztin im Rudolfinerhaus und Sanatorium Döbling. Die Ordination wird auch auf Ungarisch angeboten.
+        </p>
+        <div class="arzt-schwerpunkte">
+          <span class="label">Schwerpunkte</span>
+          <div class="schwerpunkt-tags">
+            <span class="schwerpunkt-tag">Hormone</span>
+            <span class="schwerpunkt-tag">First Love Beratung</span>
+            <span class="schwerpunkt-tag">Kinderwunsch</span>
+            <span class="schwerpunkt-tag">Schwangerschaft & Geburt</span>
+            <span class="schwerpunkt-tag">Verhütung</span>
+            <span class="schwerpunkt-tag">Magyar nyelven is</span>
+            <span class="schwerpunkt-tag">KFA · Privat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL CTA -->
+<section class="portal-section" id="portal">
+  <div class="portal-bg"></div>
+  <div class="portal-inner">
+    <div class="portal-text">
+      <span class="label">Digitale Ordination</span>
+      <h2 class="heading">Termin anfragen,<br>Rezept bestellen –<br>jederzeit online.</h2>
+      <p>Unser Patientenportal ist rund um die Uhr verfügbar. Kein Warten in der Telefonleitung – Anfragen, Termine und Befunde direkt über das Portal.</p>
+      <div class="portal-features">
+        <div class="portal-feature">
+          <div class="portal-feature-dot"></div>
+          <span>Termin online anfragen – in wenigen Minuten</span>
+        </div>
+        <div class="portal-feature">
+          <div class="portal-feature-dot"></div>
+          <span>Rezeptanfragen bequem von zu Hause</span>
+        </div>
+        <div class="portal-feature">
+          <div class="portal-feature-dot"></div>
+          <span>Befundabholung – wir benachrichtigen Sie automatisch</span>
+        </div>
+        <div class="portal-feature">
+          <div class="portal-feature-dot"></div>
+          <span>Verfügbar auf Deutsch, Ungarisch und Englisch</span>
+        </div>
+      </div>
+      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank">
+        Portal öffnen →
+      </a>
+    </div>
+
+    <div class="portal-widget">
+      <div class="portal-widget-header">
+        <div class="portal-dot" style="background:#ff5f57"></div>
+        <div class="portal-dot" style="background:#ffbd2e"></div>
+        <div class="portal-dot" style="background:#28c840"></div>
+        <span class="portal-widget-title">Patientenportal · Ordination Dr. Neumann</span>
+      </div>
+      <div class="portal-iframe-wrap">
+        <div class="portal-iframe-overlay">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#b85c6e" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p>Sicher, diskret &amp; immer verfügbar</p>
+          <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" style="font-size:0.75rem;padding:0.7rem 1.4rem">
+            Zum Portal
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="kontakt-section" id="kontakt">
+  <div class="kontakt-inner">
+    <div class="kontakt-info">
+      <div class="section-header" style="margin-bottom:2.5rem">
+        <span class="label">Anfahrt & Kontakt</span>
+        <h2 class="heading">Wir freuen uns<br>auf Ihren Besuch.</h2>
+      </div>
+
+      <div class="kontakt-block">
+        <span class="label">Adresse</span>
+        <p>Hofstattgasse 17/3<br>1180 Wien (18. Bezirk)<br><br>
+        Etwa eine Minute Gehweg vom Aumannplatz.<br>
+        Straßenbahnlinien 40 und 41 vom Schottentor.</p>
+      </div>
+
+      <div class="kontakt-block">
+        <span class="label">Telefon & E-Mail</span>
+        <p>
+          <a href="tel:+4314706559">+43 1 470 65 59</a> (während der Ordinationszeiten)<br>
+          <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
+        </p>
+      </div>
+
+      <div class="kontakt-block">
+        <span class="label">Ordinationszeiten</span>
+        <p>
+          <strong>OA Dr. Michael Neumann</strong><br>
+          Dienstag & Mittwoch, 14:00–19:00 Uhr<br>
+          <br>
+          <strong>OÄ Dr. Etelka Neumann</strong><br>
+          Montag & Donnerstag, 11:00–18:00 Uhr<br>
+          <br>
+          Termine nach Vereinbarung auch außerhalb dieser Zeiten möglich.
+        </p>
+      </div>
+
+      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank">
+        Online Termin anfragen
+      </a>
+    </div>
+
+    <div class="kontakt-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.2!2d16.344!3d48.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSG9mc3RhdHRnYXNzZSAxNy8zLCAxMTgwIFdpZW4!5e0!3m2!1sde!2sat!4v1"
+        width="100%" height="100%" style="border:0;min-height:400px" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ordination Dr. Neumann · Gynäkologie Wien 18</div>
+  <div class="footer-links">
+    <a href="#">Impressum</a>
+    <a href="#">Datenschutz</a>
+    <a href="#">Partner</a>
+  </div>
+  <div class="footer-lang">
+    <a href="#" class="active">Deutsch</a>
+    <a href="#">Magyar</a>
+    <a href="#">English</a>
+  </div>
+</footer>
+
+<script>
+  // Smooth mobile menu (basic toggle)
+  document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:white;padding:1.5rem 6vw;gap:1.5rem;border-bottom:1px solid #e8ddd8;z-index:99';
+    }
+  });
+
+  // Subtle scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.leistung-item, .arzt-card, .kontakt-block').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
