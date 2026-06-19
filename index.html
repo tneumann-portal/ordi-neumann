@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OA Dr. Michael Neumann & OÄ Dr. Etelka Neumann – Gynäkologie und Geburtshilfe in 1180 Wien. Über 35 Jahre Erfahrung. Jetzt online Termin anfragen.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; frame-src https://www.google.com https://maps.google.com https://www.google.com/maps/; img-src 'self' data: https:; connect-src https://fonts.googleapis.com https://fonts.gstatic.com;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta name="description"  content="OA Dr. Michael Neumann & OÄ Dr. Etelka Neumann – Gynäkologie und Geburtshilfe in 1180 Wien. Über 35 Jahre Erfahrung. Jetzt online Termin anfragen.">
+<link rel="canonical" href="https://www.frauenarzt-neumann.at">
 <title>Ordination Dr. Neumann – Gynäkologie Wien 18</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -495,6 +501,60 @@
     .times-row { grid-template-columns: 1fr; gap: 1rem; }
     footer { flex-direction: column; align-items: flex-start; }
   }
+
+  /* ── MODALS ── */
+  .modal-backdrop {
+    display: none;
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(42,35,32,0.6);
+    backdrop-filter: blur(4px);
+    align-items: center; justify-content: center;
+    padding: 2rem;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal-box {
+    background: var(--white);
+    max-width: 680px; width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  }
+  .modal-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.75rem 2rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; background: var(--white); z-index: 1;
+  }
+  .modal-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 400;
+    color: var(--stone);
+  }
+  .modal-close {
+    background: none; border: none; cursor: pointer;
+    font-size: 1.4rem; color: var(--stone-light);
+    line-height: 1; padding: 4px;
+    transition: color 0.2s;
+  }
+  .modal-close:hover { color: var(--stone); }
+  .modal-body {
+    padding: 2rem;
+    font-size: 0.88rem;
+    color: var(--stone-mid);
+    line-height: 1.9;
+  }
+  .modal-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--stone);
+    margin: 1.75rem 0 0.5rem;
+  }
+  .modal-body h3:first-child { margin-top: 0; }
+  .modal-body p { margin-bottom: 0.75rem; }
+  .modal-body a { color: var(--rose); }
+  .modal-body ul { padding-left: 1.2rem; }
+  .modal-body ul li { margin-bottom: 0.4rem; }
 </style>
 </head>
 <body>
@@ -507,7 +567,7 @@
     <a href="#ueber-uns">Über uns</a>
     <a href="#kontakt">Kontakt</a>
     <a href="#" class="nav-lang" style="color:var(--stone-light);font-size:0.75rem;letter-spacing:0.08em">Magyar</a>
-    <a href="https://neumann-portal-frontend.onrender.com" class="nav-cta" target="_blank">Online Portal</a>
+    <a href="https://neumann-portal-frontend.onrender.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Online Portal</a>
   </div>
   <button class="mobile-menu-btn" aria-label="Menü">
     <span></span><span></span><span></span>
@@ -527,7 +587,7 @@
       OA Dr. Michael Neumann und OÄ Dr. Etelka Neumann betreuen Frauen aller Altersgruppen und Nationen in ihrer Ordination in Wien-Währing – seit über 35 Jahren.
     </p>
     <div class="hero-actions">
-      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank">
+      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
         Termin online anfragen
       </a>
       <a href="#ueber-uns" class="btn-outline">Über die Ordination</a>
@@ -751,7 +811,7 @@
           <span>Verfügbar auf Deutsch, Ungarisch und Englisch</span>
         </div>
       </div>
-      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank">
+      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
         Portal öffnen →
       </a>
     </div>
@@ -767,7 +827,7 @@
         <div class="portal-iframe-overlay">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#b85c6e" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <p>Sicher, diskret &amp; immer verfügbar</p>
-          <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" style="font-size:0.75rem;padding:0.7rem 1.4rem">
+          <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;padding:0.7rem 1.4rem">
             Zum Portal
           </a>
         </div>
@@ -813,14 +873,14 @@
         </p>
       </div>
 
-      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank">
+      <a href="https://neumann-portal-frontend.onrender.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
         Online Termin anfragen
       </a>
     </div>
 
     <div class="kontakt-map">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.2!2d16.344!3d48.226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSG9mc3RhdHRnYXNzZSAxNy8zLCAxMTgwIFdpZW4!5e0!3m2!1sde!2sat!4v1"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.535!2d16.3402!3d48.2265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07851b5ae4e5%3A0x9f8e6c7a2b3d1234!2sHofstattgasse%2017%2C%201180%20Wien!5e0!3m2!1sde!2sat!4v1700000000000!5m2!1sde!2sat"
         width="100%" height="100%" style="border:0;min-height:400px" allowfullscreen loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
@@ -832,9 +892,9 @@
 <footer>
   <div class="footer-logo">Ordination Dr. Neumann · Gynäkologie Wien 18</div>
   <div class="footer-links">
-    <a href="#">Impressum</a>
-    <a href="#">Datenschutz</a>
-    <a href="#">Partner</a>
+    <a href="#" onclick="openModal('impressum'); return false;">Impressum</a>
+    <a href="#" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
+    <a href="https://www.frauenarzt-neumann.at/partner" target="_blank" rel="noopener noreferrer">Partner</a>
   </div>
   <div class="footer-lang">
     <a href="#" class="active">Deutsch</a>
@@ -854,6 +914,17 @@
     }
   });
 
+  // Modal functions
+  function openModal(which) {
+    document.getElementById('modal-' + which).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('open'));
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
   // Subtle scroll animation
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -871,5 +942,142 @@
     observer.observe(el);
   });
 </script>
+
+<!-- IMPRESSUM MODAL -->
+<div class="modal-backdrop" id="modal-impressum" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Impressum</h2>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>Angaben gemäß § 5 ECG</h3>
+      <p>
+        <strong>OA Dr. Michael Neumann</strong><br>
+        Facharzt für Gynäkologie und Geburtshilfe<br>
+        Hofstattgasse 17/3<br>
+        1180 Wien, Österreich
+      </p>
+
+      <h3>Kontakt</h3>
+      <p>
+        Telefon: <a href="tel:+4314706559">+43 1 470 65 59</a><br>
+        E-Mail: <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a><br>
+        Website: <a href="https://www.frauenarzt-neumann.at">www.frauenarzt-neumann.at</a>
+      </p>
+
+      <h3>Berufsrecht</h3>
+      <p>
+        Berufsbezeichnung: Facharzt für Gynäkologie und Geburtshilfe (verliehen in Österreich)<br>
+        Zuständige Aufsichtsbehörde: Ärztekammer Wien<br>
+        Anwendbare Rechtsvorschriften: Ärztegesetz 1998 (ÄrzteG), abrufbar unter <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener noreferrer">www.ris.bka.gv.at</a>
+      </p>
+
+      <h3>Kammerzugehörigkeit</h3>
+      <p>
+        Österreichische Ärztekammer<br>
+        Ärztekammer für Wien<br>
+        Weihburggasse 10–12, 1010 Wien
+      </p>
+
+      <h3>Umsatzsteuer</h3>
+      <p>
+        Ärztliche Leistungen sind gemäß § 6 Abs. 1 Z 19 UStG von der Umsatzsteuer befreit.
+      </p>
+
+      <h3>Haftungsausschluss</h3>
+      <p>
+        Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Die Informationen auf dieser Website ersetzen keine ärztliche Beratung oder Behandlung.
+      </p>
+
+      <h3>Urheberrecht</h3>
+      <p>
+        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+      </p>
+
+      <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--stone-light)">
+        Stand: Juni 2026
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ MODAL (Basis) -->
+<div class="modal-backdrop" id="modal-datenschutz" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Datenschutzerklärung</h2>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>Verantwortlicher</h3>
+      <p>
+        <strong>Ordination Dr. Michael Neumann &amp; Dr. Etelka Neumann</strong><br>
+        OA Dr. Michael Neumann<br>
+        Facharzt für Gynäkologie und Geburtshilfe<br>
+        Hofstattgasse 17/3, 1180 Wien<br>
+        Telefon: <a href="tel:+4314706559">+43 1 470 65 59</a><br>
+        E-Mail: <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
+      </p>
+
+      <h3>Grundsatz</h3>
+      <p>
+        Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003).
+      </p>
+
+      <h3>Welche Daten wir verarbeiten</h3>
+      <p>Diese Website selbst speichert keine personenbezogenen Daten. Wenn Sie unser Patientenportal nutzen, werden folgende Daten erhoben:</p>
+      <ul>
+        <li>Telefonnummer (zur Identifikation und Terminbestätigung)</li>
+        <li>Name (freiwillig, zur persönlichen Ansprache)</li>
+        <li>E-Mail-Adresse (freiwillig, für Bestätigungen)</li>
+        <li>Versicherungsstatus (zur Terminplanung)</li>
+        <li>Ihre Anliegen und Anfragen</li>
+      </ul>
+
+      <h3>Zweck der Verarbeitung</h3>
+      <p>
+        Die Daten werden ausschließlich zur Terminvereinbarung, Bearbeitung von Anfragen und zur direkten Kommunikation mit Ihnen als Patientin verwendet. Eine Weitergabe an Dritte erfolgt nicht.
+      </p>
+
+      <h3>Speicherdauer</h3>
+      <p>
+        Ihre Daten werden so lange gespeichert, wie dies für die Erfüllung der genannten Zwecke erforderlich ist. Gesundheitsdaten unterliegen gesetzlichen Aufbewahrungsfristen gemäß Ärztegesetz (mindestens 10 Jahre).
+      </p>
+
+      <h3>Google Maps</h3>
+      <p>
+        Diese Website verwendet Google Maps zur Darstellung des Anfahrtsplans. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Aufrufen der Karte werden Daten an Google übertragen. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.
+      </p>
+
+      <h3>Ihre Rechte</h3>
+      <p>Ihnen stehen bezüglich Ihrer bei uns gespeicherten Daten grundsätzlich folgende Rechte zu:</p>
+      <ul>
+        <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+        <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+        <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+        <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+      </ul>
+      <p>
+        Zur Ausübung dieser Rechte wenden Sie sich bitte an: <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
+      </p>
+
+      <h3>Beschwerderecht</h3>
+      <p>
+        Sie haben das Recht, sich bei der österreichischen Datenschutzbehörde zu beschweren:<br>
+        Österreichische Datenschutzbehörde<br>
+        Barichgasse 40–42, 1030 Wien<br>
+        <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a>
+      </p>
+
+      <p style="margin-top:1.5rem;font-size:0.78rem;color:var(--stone-light)">
+        Stand: Juni 2026 · Kein Cookie-Banner erforderlich, da keine Tracking-Cookies verwendet werden.
+      </p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
