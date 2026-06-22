@@ -226,6 +226,12 @@
     opacity: 0.08;
   }
 
+  .hero-logo-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1.5rem;
+  }
   .hero-times-card {
     position: relative; z-index: 1;
     background: var(--white);
@@ -664,6 +670,9 @@
       <line x1="60" y1="250" x2="340" y2="250" stroke="#b85c6e" stroke-width="0.5"/>
     </svg>
 
+    <div class="hero-logo-display">
+      <img src="logo-neumann.png" alt="Frauenarzt Neumann" style="width:clamp(160px,18vw,240px);opacity:0.92;filter:drop-shadow(0 4px 16px rgba(42,35,32,0.12));">
+    </div>
     <div class="hero-times-card">
       <span class="label" id="times-title">Ordinationszeiten</span>
       <div class="times-row">
@@ -959,7 +968,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Ordination Dr. Neumann · Gynäkologie Wien 18</div>
+  <div class="footer-logo"><img src="logo-neumann.png" alt="Frauenarzt Neumann" style="height:36px;width:auto;opacity:0.85;filter:brightness(0) invert(1);"></div>
   <div class="footer-links">
     <a href="#" id="footer-impressum" onclick="openModal('impressum'); return false;">Impressum</a>
     <a href="#" id="footer-datenschutz" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
