@@ -1392,39 +1392,22 @@
   async function loadPartners() {
     var container = document.getElementById('partner-list-modal');
     if (!container || container.dataset.loaded === 'true') return;
-    // Show static data immediately
+    // Zeige sofort statische Daten
     renderPartners(STATIC_PARTNERS);
-    // Then try to load live data from backend (may be sleeping on free plan)
+    // Live-Daten vom Backend nachladen
     try {
       var controller = new AbortController();
-      setTimeout(function() { controller.abort(); }, 5000);
+      setTimeout(function() { controller.abort(); }, 8000);
       var resp = await fetch('https://neumann-portal-backend.onrender.com/partners/public', { signal: controller.signal });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
       var data = await resp.json();
       var partners = data.data || [];
-      if (partners.length === 0) {
-        container.innerHTML = '<p style="color:#9a8e8a">Keine Partner eingetragen.</p>';
-        return;
-      }
-      container.innerHTML = partners.map(function(p) {
-        return '<div style="background:#faf7f4;border:0.5px solid #e8ddd8;border-radius:8px;padding:1.2rem 1.4rem;margin-bottom:1rem">' +
-          '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem">' +
-            '<div>' +
-              (p.specialty ? '<div style="font-size:0.62rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#9b4f7a;margin-bottom:0.3rem">' + p.specialty + '</div>' : '') +
-              '<div style="font-family:Cormorant Garamond,serif;font-size:1.2rem;font-weight:400;color:#2a2320">' + p.name + '</div>' +
-              (p.notes ? '<div style="font-size:0.8rem;color:#5a4e4a;margin-top:0.25rem">' + p.notes + '</div>' : '') +
-            '</div>' +
-            (p.website ? '<a href="https://' + p.website.replace(/^https?:\/\//, '') + '" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;color:#9b4f7a;border:0.5px solid #9b4f7a;border-radius:2px;padding:0.3rem 0.7rem;white-space:nowrap;text-decoration:none">Website &#8594;</a>' : '') +
-          '</div>' +
-          (p.address ? '<div style="font-size:0.8rem;color:#9a8e8a;margin-top:0.5rem">&#128205; ' + p.address + '</div>' : '') +
-          (p.phone ? '<div style="font-size:0.8rem;color:#9a8e8a;margin-top:0.25rem">&#128222; <a href="tel:' + p.phone + '" style="color:#9b4f7a">' + p.phone + '</a></div>' : '') +
-        '</div>';
-      }).join('');
       if (partners.length > 0) {
         renderPartners(partners);
       }
+      // Bei leerer Liste: statische Daten bleiben
     } catch(e) {
-      // Backend not reachable - static data already shown, no error needed
-      console.log('Backend partners not available, using static data');
+      console.log('Backend nicht erreichbar - statische Partnerdaten werden angezeigt');
     }
   }
 </script>
