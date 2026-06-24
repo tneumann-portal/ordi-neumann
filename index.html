@@ -795,7 +795,7 @@
         </p>
         <div class="arzt-schwerpunkte">
           <span class="label" id="arzt-m-schwerpunkte">Schwerpunkte</span>
-          <div class="schwerpunkt-tags">
+          <div class="schwerpunkt-tags" id="arzt-m-tags">
             <span class="schwerpunkt-tag">Hormonberatung</span>
             <span class="schwerpunkt-tag">Ultraschalldiagnostik</span>
             <span class="schwerpunkt-tag">Schwangerschaft</span>
@@ -822,10 +822,10 @@
           <span class="label" id="arzt-e-schwerpunkte">Schwerpunkte</span>
           <div class="schwerpunkt-tags">
             <span class="schwerpunkt-tag">Hormone</span>
-            <span class="schwerpunkt-tag">First Love Beratung</span>
-            <span class="schwerpunkt-tag">Kinderwunsch</span>
-            <span class="schwerpunkt-tag">Schwangerschaft & Geburt</span>
-            <span class="schwerpunkt-tag">Verhütung</span>
+            <span class="schwerpunkt-tag" id="arzt-e-tag-1">First Love Beratung</span>
+            <span class="schwerpunkt-tag" id="arzt-e-tag-2">Kinderwunsch</span>
+            <span class="schwerpunkt-tag" id="arzt-e-tag-3">Schwangerschaft & Geburt</span>
+            <span class="schwerpunkt-tag" id="arzt-e-tag-4">Verhütung</span>
             <span class="schwerpunkt-tag">Magyar nyelven is</span>
             <span class="schwerpunkt-tag">KFA · Privat</span>
           </div>
@@ -945,24 +945,24 @@
 <section class="reviews-section" id="reviews-section">
   <div class="section-inner">
     <div class="section-header">
-      <span class="label">Bewertungen</span>
-      <h2 class="heading">Was unsere Patientinnen<br>über uns sagen.</h2>
+      <span class="label" id="reviews-label">Bewertungen</span>
+      <h2 class="heading" id="reviews-h2">Was unsere Patientinnen<br>über uns sagen.</h2>
     </div>
     <div class="reviews-grid" id="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">Fr. Dr. Neumann und Hr. Dr. Neumann sind mit Abstand die zwei nettesten Ärzte, die ich je erlebt habe. Als Menschen sind sie einfach zwei Engel. In ihrer Ordination fühlt man sich wie in einer Wohlfühloase. Ich wurde sehr aufmerksam und hingebungsvoll betreut.</div>
-        <div class="review-footer"><span class="review-name">Lejla B.</span><span class="review-date">Verifizierte Patientin</span></div>
+        <div class="review-text" id="review-text-1">Fr. Dr. Neumann und Hr. Dr. Neumann sind mit Abstand die zwei nettesten Ärzte, die ich je erlebt habe. Als Menschen sind sie einfach zwei Engel. In ihrer Ordination fühlt man sich wie in einer Wohlfühloase. Ich wurde sehr aufmerksam und hingebungsvoll betreut.</div>
+        <div class="review-footer"><span class="review-name">Lejla B.</span><span class="review-date" id="review-date-1">Verifizierte Patientin</span></div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">Einer der wenigen Gynäkologen die wissen, dass man Frauen auch zuhören muss um herauszufinden was ihnen fehlt und was ihnen persönlich am besten hilft. Dr. Neumann ist ein Arzt mit viel Erfahrung und scharfem Blick fürs Wesentliche. Kurze Wartezeiten, da bleibt man gerne.</div>
-        <div class="review-footer"><span class="review-name">Patientin</span><span class="review-date">Verifizierte Patientin</span></div>
+        <div class="review-text" id="review-text-2">Einer der wenigen Gynäkologen die wissen, dass man Frauen auch zuhören muss um herauszufinden was ihnen fehlt und was ihnen persönlich am besten hilft. Dr. Neumann ist ein Arzt mit viel Erfahrung und scharfem Blick fürs Wesentliche. Kurze Wartezeiten, da bleibt man gerne.</div>
+        <div class="review-footer"><span class="review-name">Patientin</span><span class="review-date" id="review-date-2">Verifizierte Patientin</span></div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">Super Arzt. Sehr kompetent und freundlich. Hat mich im Wilhelminenspital wegen Endometriose operiert und mich danach auch weiter super betreut. Sehr empfehlenswert!</div>
-        <div class="review-footer"><span class="review-name">Patientin</span><span class="review-date">Verifizierte Patientin</span></div>
+        <div class="review-text" id="review-text-3">Super Arzt. Sehr kompetent und freundlich. Hat mich im Wilhelminenspital wegen Endometriose operiert und mich danach auch weiter super betreut. Sehr empfehlenswert!</div>
+        <div class="review-footer"><span class="review-name">Patientin</span><span class="review-date" id="review-date-3">Verifizierte Patientin</span></div>
       </div>
     </div>
   </div>
@@ -1064,6 +1064,16 @@
         times_body: '<strong>OA Dr. Michael Neumann</strong><br>Dienstag & Mittwoch, 14:00–19:00 Uhr<br><br><strong>OÄ Dr. Etelka Neumann</strong><br>Montag & Donnerstag, 11:00–18:00 Uhr<br><br>Termine nach Vereinbarung auch außerhalb dieser Zeiten möglich.',
         cta: 'Online Termin anfragen',
       },
+      reviews: {
+        label: 'Bewertungen',
+        h2: 'Was unsere Patientinnen<br>über uns sagen.',
+        verified: 'Verifizierte Patientin',
+        r1: 'Fr. Dr. Neumann und Hr. Dr. Neumann sind mit Abstand die zwei nettesten Ärzte, die ich je erlebt habe. Als Menschen sind sie einfach zwei Engel. In ihrer Ordination fühlt man sich wie in einer Wohlfühloase. Ich wurde sehr aufmerksam und hingebungsvoll betreut.',
+        r2: 'Einer der wenigen Gynäkologen die wissen, dass man Frauen auch zuhören muss um herauszufinden was ihnen fehlt und was ihnen persönlich am besten hilft. Dr. Neumann ist ein Arzt mit viel Erfahrung und scharfem Blick fürs Wesentliche. Kurze Wartezeiten, da bleibt man gerne.',
+        r3: 'Super Arzt. Sehr kompetent und freundlich. Hat mich im Wilhelminenspital wegen Endometriose operiert und mich danach auch weiter super betreut. Sehr empfehlenswert!',
+      },
+      schwerpunkte_m: ['Hormonberatung','Ultraschalldiagnostik','Schwangerschaft','Kinderwunsch','BVAEB · KFA · Privat'],
+      schwerpunkte_e: ['First Love Beratung','Kinderwunsch','Schwangerschaft & Geburt','Verhütung'],
       footer: { impressum: 'Impressum', datenschutz: 'Datenschutz', partner: 'Partner' },
       modal_impressum: 'Impressum',
       modal_datenschutz: 'Datenschutzerklärung',
@@ -1134,6 +1144,16 @@
         times_body: '<strong>OA Dr. Michael Neumann</strong><br>Kedd & Szerda, 14:00–19:00<br><br><strong>OÄ Dr. Etelka Neumann</strong><br>Hétfő & Csütörtök, 11:00–18:00<br><br>Megbeszélés alapján az időpontokon kívül is lehetséges.',
         cta: 'Online időpontfoglalás',
       },
+      reviews: {
+        label: 'Értékelések',
+        h2: 'Amit pácienseink<br>mondanak rólunk.',
+        verified: 'Hitelesített páciens',
+        r1: 'Dr. Neumann asszony és Dr. Neumann úr messze a legkedvesebb orvosok, akikkel valaha találkoztam. Ember voltukból fakadóan igazi angyalok. Rendelőjükben jól érzi magát az ember. Nagyon figyelmes és odaadó ellátásban részesültem.',
+        r2: 'Az egyik kevés nőgyógyász, aki tudja, hogy a nőkre hallgatni is kell, hogy kiderüljön, mi hiányzik nekik és mi segít nekik a legjobban. Dr. Neumann tapasztalt orvos, aki lényeglátó. Rövid várakozási idő – szívesen visszatérünk.',
+        r3: 'Kiváló orvos. Nagyon kompetens és barátságos. A Wilhelminenspitalban endometriózis miatt megoperált, és utána is kiválóan gondozott. Nagyon ajánlom!',
+      },
+      schwerpunkte_m: ['Hormonális tanácsadás','Ultrahangdiagnosztika','Terhesség','Gyermekvállalás','BVAEB · KFA · Privát'],
+      schwerpunkte_e: ['First Love tanácsadás','Gyermekvállalás','Terhesség és szülés','Fogamzásgátlás'],
       footer: { impressum: 'Impresszum', datenschutz: 'Adatvédelem', partner: 'Partnerek' },
       modal_impressum: 'Impresszum',
       modal_datenschutz: 'Adatvédelmi nyilatkozat',
@@ -1204,6 +1224,16 @@
         times_body: "<strong>OA Dr. Michael Neumann</strong><br>Tuesday & Wednesday, 2:00 pm–7:00 pm<br><br><strong>OÄ Dr. Etelka Neumann</strong><br>Monday & Thursday, 11:00 am–6:00 pm<br><br>Appointments by arrangement also possible outside these hours.",
         cta: 'Book appointment online',
       },
+      reviews: {
+        label: 'Patient reviews',
+        h2: 'What our patients<br>say about us.',
+        verified: 'Verified patient',
+        r1: 'Dr. Neumann and Dr. Neumann are by far the two nicest doctors I have ever met. As people, they are simply two angels. In their practice you feel like you are in a wellness oasis. I was treated with great care and dedication.',
+        r2: 'One of the few gynaecologists who know that you have to listen to women to find out what is wrong and what helps them best. Dr. Neumann is a doctor with a lot of experience and a sharp eye for what matters. Short waiting times – you are happy to come back.',
+        r3: 'Great doctor. Very competent and friendly. He operated on me at Wilhelminen Hospital for endometriosis and then looked after me superbly. Highly recommended!',
+      },
+      schwerpunkte_m: ['Hormone consultation','Ultrasound diagnostics','Pregnancy','Family planning','BVAEB · KFA · Private'],
+      schwerpunkte_e: ['First Love consultation','Family planning','Pregnancy & birth','Contraception'],
       footer: { impressum: 'Legal notice', datenschutz: 'Privacy policy', partner: 'Partners' },
       modal_impressum: 'Legal Notice',
       modal_datenschutz: 'Privacy Policy',
@@ -1308,6 +1338,49 @@
       if (isActive) a.style.background = 'var(--rose-mist,#f7edf9)';
       else a.style.background = '';
     });
+
+    // Reviews
+    if (t.reviews) {
+      const rl = document.getElementById('reviews-label');
+      const rh = document.getElementById('reviews-h2');
+      if (rl) rl.textContent = t.reviews.label;
+      if (rh) rh.innerHTML = t.reviews.h2;
+      const r1 = document.getElementById('review-text-1');
+      const r2 = document.getElementById('review-text-2');
+      const r3 = document.getElementById('review-text-3');
+      if (r1) r1.textContent = t.reviews.r1;
+      if (r2) r2.textContent = t.reviews.r2;
+      if (r3) r3.textContent = t.reviews.r3;
+      ['review-date-1','review-date-2','review-date-3'].forEach(function(id) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = t.reviews.verified;
+      });
+    }
+
+    // Schwerpunkte Michael
+    if (t.schwerpunkte_m) {
+      const cont = document.getElementById('arzt-m-tags');
+      if (cont) {
+        cont.innerHTML = t.schwerpunkte_m.map(function(s) {
+          return '<span class="schwerpunkt-tag">' + s + '</span>';
+        }).join('') + '<span class="schwerpunkt-tag">BVAEB · KFA · Privat</span>';
+      }
+    }
+
+    // Schwerpunkte Etelka
+    if (t.schwerpunkte_e) {
+      var tags = ['arzt-e-tag-1','arzt-e-tag-2','arzt-e-tag-3','arzt-e-tag-4'];
+      t.schwerpunkte_e.forEach(function(text, i) {
+        var el = document.getElementById(tags[i]);
+        if (el) el.textContent = text;
+      });
+    }
+
+    // Impressum / Datenschutz Modal-Titel
+    var imp = document.querySelector('#modal-impressum h2');
+    var dat = document.querySelector('#modal-datenschutz h2');
+    if (imp) imp.textContent = t.modal_impressum;
+    if (dat) dat.textContent = t.modal_datenschutz;
 
     // Update all portal links to pass current language
     document.querySelectorAll('.portal-link').forEach(a => {
