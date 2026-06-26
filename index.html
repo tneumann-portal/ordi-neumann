@@ -9,7 +9,8 @@
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 <meta name="description"  content="OA Dr. Michael Neumann & OÄ Dr. Etelka Neumann – Gynäkologie und Geburtshilfe in 1180 Wien. Über 35 Jahre Erfahrung. Jetzt online Termin anfragen.">
-<link rel="canonical" href="https://www.frauenarzt-neumann.at">
+<link rel="canonical" href="https://www.helenini.at">
+  <!-- TEST-VERSION: helenini.at – Zieldomain: frauenarzt-neumann.at -->
 <title>Ordination Dr. Neumann – Gynäkologie Wien 18</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -602,7 +603,7 @@
       <span style="color:var(--border)">|</span>
       <a href="#" class="nav-lang-btn" data-lang="en" onclick="setLang('en');return false;" style="font-size:0.72rem;font-weight:500;letter-spacing:0.08em;color:var(--stone-light)">EN</a>
     </div>
-    <a href="https://neumann-portal-frontend.onrender.com?lang=de" id="nav-portal" class="portal-link nav-cta" target="_blank" rel="noopener noreferrer">Online Portal</a>
+    <a href="https://portal.helenini.at?lang=de" id="nav-portal" class="portal-link nav-cta" target="_blank" rel="noopener noreferrer">Online Portal</a>
   </div>
   <div style="display:none;align-items:center;gap:10px" class="mobile-controls">
     <div style="display:flex;gap:2px;border:0.5px solid var(--border);border-radius:3px;overflow:hidden">
@@ -634,7 +635,7 @@
       OA Dr. Michael Neumann und OÄ Dr. Etelka Neumann betreuen Frauen aller Altersgruppen und Nationen in ihrer Ordination in Wien-Währing – seit über 35 Jahren.
     </p>
     <div class="hero-actions">
-      <a href="https://neumann-portal-frontend.onrender.com?lang=de" id="hero-cta1" class="portal-link btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="https://portal.helenini.at?lang=de" id="hero-cta1" class="portal-link btn-primary" target="_blank" rel="noopener noreferrer">
         Termin online anfragen
       </a>
       <a href="#ueber-uns" id="hero-cta2" class="btn-outline">Über die Ordination</a>
@@ -691,7 +692,7 @@
       </div>
       <div class="times-contact">
         <span>📞 <a href="tel:+4314706559">+43 1 470 65 59</a></span>
-        <span>✉ <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a></span>
+        <span>✉ <a href="mailto:info@helenini.at">info@helenini.at</a></span>
         <span>📍 Hofstattgasse 17/3, 1180 Wien</span>
       </div>
     </div>
@@ -861,7 +862,7 @@
           <span id="portal-f4">Verfügbar auf Deutsch, Ungarisch und Englisch</span>
         </div>
       </div>
-      <a href="https://neumann-portal-frontend.onrender.com?lang=de" id="portal-cta" class="portal-link btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="https://portal.helenini.at?lang=de" id="portal-cta" class="portal-link btn-primary" target="_blank" rel="noopener noreferrer">
         Portal öffnen →
       </a>
     </div>
@@ -877,7 +878,7 @@
         <div class="portal-iframe-overlay">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9b4f7a" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <p id="portal-badge">Sicher, diskret &amp; immer verfügbar</p>
-          <a href="https://neumann-portal-frontend.onrender.com?lang=de" class="btn-primary portal-link" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;padding:0.7rem 1.4rem">
+          <a href="https://portal.helenini.at?lang=de" class="btn-primary portal-link" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem;padding:0.7rem 1.4rem">
             Zum Portal
           </a>
         </div>
@@ -908,7 +909,7 @@
         <span class="label" id="kontakt-tel-title">Telefon & E-Mail</span>
         <p>
           <a href="tel:+4314706559">+43 1 470 65 59</a> <span id="kontakt-tel-hours">während der Ordinationszeiten</span><br>
-          <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
+          <a href="mailto:info@helenini.at">info@helenini.at</a>
         </p>
       </div>
 
@@ -925,7 +926,7 @@
         </p>
       </div>
 
-      <a id="kontakt-cta" href="https://neumann-portal-frontend.onrender.com?lang=de" class="portal-link btn-primary" target="_blank" rel="noopener noreferrer">
+      <a id="kontakt-cta" href="https://portal.helenini.at?lang=de" class="portal-link btn-primary" target="_blank" rel="noopener noreferrer">
         Online Termin anfragen
       </a>
     </div>
@@ -1384,7 +1385,7 @@
 
     // Update all portal links to pass current language
     document.querySelectorAll('.portal-link').forEach(a => {
-      a.href = 'https://neumann-portal-frontend.onrender.com?lang=' + lang;
+      a.href = 'https://portal.helenini.at?lang=' + lang;
     });
   }
 
@@ -1461,18 +1462,21 @@
     }).join('');
   }
 
+  var BACKEND_URL = 'https://neumann-portal-backend.onrender.com';
+
+  // Render beim Seitenload im Hintergrund aufwecken
+  fetch(BACKEND_URL + '/', { method: 'GET', mode: 'cors' }).catch(function(){});
+
   async function loadPartners() {
     var container = document.getElementById('partner-list-modal');
     if (!container) return;
-    // Zeige sofort statische Daten als Fallback
-    if (container.dataset.loaded !== 'true') {
-      renderPartners(STATIC_PARTNERS);
-    }
+    // Zeige sofort statische Daten als Platzhalter
+    renderPartners(STATIC_PARTNERS);
     // Live-Daten vom Backend nachladen (jedes Mal beim Öffnen)
     try {
       var controller = new AbortController();
-      setTimeout(function() { controller.abort(); }, 15000);
-      var resp = await fetch('https://neumann-portal-backend.onrender.com/partners/public', { signal: controller.signal });
+      setTimeout(function() { controller.abort(); }, 35000);
+      var resp = await fetch(BACKEND_URL + '/partners/public', { signal: controller.signal });
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       var data = await resp.json();
       var partners = data.data || [];
@@ -1516,8 +1520,8 @@
       <h3>Kontakt</h3>
       <p>
         Telefon: <a href="tel:+4314706559">+43 1 470 65 59</a><br>
-        E-Mail: <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a><br>
-        Website: <a href="https://www.frauenarzt-neumann.at">www.frauenarzt-neumann.at</a>
+        E-Mail: <a href="mailto:info@helenini.at">info@helenini.at</a><br>
+        Website: <a href="https://www.helenini.at">www.helenini.at</a>
       </p>
 
       <h3>Berufsrecht</h3>
@@ -1571,7 +1575,7 @@
         Facharzt für Gynäkologie und Geburtshilfe<br>
         Hofstattgasse 17/3, 1180 Wien<br>
         Telefon: <a href="tel:+4314706559">+43 1 470 65 59</a><br>
-        E-Mail: <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
+        E-Mail: <a href="mailto:info@helenini.at">info@helenini.at</a>
       </p>
 
       <h3>Grundsatz</h3>
@@ -1615,7 +1619,7 @@
         <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
       </ul>
       <p>
-        Zur Ausübung dieser Rechte wenden Sie sich bitte an: <a href="mailto:ordi@frauenarzt-neumann.at">ordi@frauenarzt-neumann.at</a>
+        Zur Ausübung dieser Rechte wenden Sie sich bitte an: <a href="mailto:info@helenini.at">info@helenini.at</a>
       </p>
 
       <h3>Beschwerderecht</h3>
